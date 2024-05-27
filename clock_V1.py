@@ -32,11 +32,51 @@ def get_next_event(events):
 
 # List of events with time zone information
 events = [
-    ("Trackwalk start", time_zone.localize(datetime(2024, 5, 26, 19, 0, 0))),
-    ("Trackwalk end", time_zone.localize(datetime(2024, 5, 26, 20, 0, 0))),
-    ("Pitlane open", time_zone.localize(datetime(2024, 5, 11, 10, 10, 0))),
-    ("Race 1 start", time_zone.localize(datetime(2024, 5, 11, 10, 30, 0))),
-    ("Race 1 end", time_zone.localize(datetime(2024, 5, 11, 11, 5, 0)))
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 3, 8, 30, 0))),
+    ("Morning session start", time_zone.localize(datetime(2024, 6, 3, 9, 0, 0))),
+    ("Morning session end", time_zone.localize(datetime(2024, 6, 3, 12, 0, 0))),
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 3, 12, 30, 0))),
+    ("Afternoon session start", time_zone.localize(datetime(2024, 6, 3, 13, 0, 0))),
+    ("Afternoon session end", time_zone.localize(datetime(2024, 6, 3, 17, 0, 0))),
+
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 4, 8, 30, 0))),
+    ("Morning session start", time_zone.localize(datetime(2024, 6, 4, 9, 0, 0))),
+    ("Morning session end", time_zone.localize(datetime(2024, 6, 4, 12, 0, 0))),
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 4, 12, 30, 0))),
+    ("Afternoon session start", time_zone.localize(datetime(2024, 6, 4, 13, 0, 0))),
+    ("Afternoon session end", time_zone.localize(datetime(2024, 6, 4, 17, 0, 0))),
+
+    ("Tyre pick up start", time_zone.localize(datetime(2024, 6, 6, 13, 0, 0))),
+    ("Tyre pick up end", time_zone.localize(datetime(2024, 6, 6, 15, 0, 0))),
+    ("Track walk start", time_zone.localize(datetime(2024, 6, 6, 16, 0, 0))),
+    ("Tyre scanning start", time_zone.localize(datetime(2024, 6, 6, 16, 0, 0))),
+    ("Tyre scanning end", time_zone.localize(datetime(2024, 6, 6, 18, 0, 0))),
+    ("Team managers meeting start", time_zone.localize(datetime(2024, 6, 6, 20, 0, 0))),
+    ("Team managers meeting end", time_zone.localize(datetime(2024, 6, 6, 20, 30, 0))),
+
+    ("Drivers briefing start", time_zone.localize(datetime(2024, 6, 7, 11, 0, 0))),
+    ("Drivers briefing end", time_zone.localize(datetime(2024, 6, 7, 11, 40, 0))),
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 7, 13, 20, 0))),
+    ("Free practice 1 start", time_zone.localize(datetime(2024, 6, 7, 13, 50, 0))),
+    ("Free practice 1 end", time_zone.localize(datetime(2024, 6, 7, 14, 30, 0))),
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 7, 17, 45, 0))),
+    ("Free practice 2 start", time_zone.localize(datetime(2024, 6, 7, 18, 15, 0))),
+    ("Free practice 2 end", time_zone.localize(datetime(2024, 6, 7, 18, 55, 0))),
+
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 8, 8, 30, 0))),
+    ("Qualifying start", time_zone.localize(datetime(2024, 6, 8, 9, 0, 0))),
+    ("Qualifying end", time_zone.localize(datetime(2024, 6, 8, 9, 35, 0))),
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 8, 16, 0, 0))),
+    ("Pitlane open", time_zone.localize(datetime(2024, 6, 8, 16, 20, 0))),
+    ("Race 1 start", time_zone.localize(datetime(2024, 6, 8, 16, 40, 0))),
+    ("Race 1 end", time_zone.localize(datetime(2024, 6, 8, 17, 10, 0))),
+
+    ("Cars ready", time_zone.localize(datetime(2024, 6, 8, 9, 45, 0))),
+    ("Pitlane open", time_zone.localize(datetime(2024, 6, 9, 10, 15, 0))),
+    ("Race 1 start", time_zone.localize(datetime(2024, 6, 9, 10, 35, 0))),
+    ("Race 1 end", time_zone.localize(datetime(2024, 6, 9, 11, 5, 0))),
+
+    
 ]
 
 # Create columns for time of day and countdown
@@ -79,17 +119,17 @@ def update():
     with col1:
         st.markdown("<h2 style='margin-bottom: 0px;'><u>Event Name</u></h2>", unsafe_allow_html=True)
         for event in event_names:
-            st.markdown(f"<p style='font-size:40px; margin-bottom: 0px;'>{event}</p>", unsafe_allow_html=True)
+            st.markdown(f"<p style='font-size:35px; margin-bottom: 0px;'>{event}</p>", unsafe_allow_html=True)
     
     with col2:
         st.markdown("<h2 style='margin-bottom: 0px;'><u>Date</u></h2>", unsafe_allow_html=True)
         for date in event_dates:
-            st.markdown(f"<p style='font-size:40px; margin-bottom: 0px;'>{date}</p>", unsafe_allow_html=True)
+            st.markdown(f"<p style='font-size:35px; margin-bottom: 0px;'>{date}</p>", unsafe_allow_html=True)
     
     with col3:
         st.markdown("<h2 style='margin-bottom: 0px;'><u>Time</u></h2>", unsafe_allow_html=True)
         for time in event_times:
-            st.markdown(f"<p style='font-size:40px; margin-bottom: 0px;'>{time}</p>", unsafe_allow_html=True)
+            st.markdown(f"<p style='font-size:35px; margin-bottom: 0px;'>{time}</p>", unsafe_allow_html=True)
 
     with col4:
         st.markdown("<h2 style='margin-bottom: 0px;'><u>Countdown</u></h2>", unsafe_allow_html=True)
@@ -97,9 +137,9 @@ def update():
             if time > 0:
                 hours, remainder = divmod(int(time), 3600)
                 minutes, seconds = divmod(remainder, 60)
-                st.markdown(f"<p style='font-size:40px; margin-bottom: 0px;'>{hours:02d}:{minutes:02d}:{seconds:02d}</p>", unsafe_allow_html=True)
+                st.markdown(f"<p style='font-size:35px; margin-bottom: 0px;'><span style='color:Lime'>{hours:02d}:{minutes:02d}:{seconds:02d}</span></p>", unsafe_allow_html=True)
             else:
-                st.markdown(f"<p style='font-size:40px; margin-bottom: 0px;'>00:00:00</p>", unsafe_allow_html=True)
+                st.markdown(f"<p style='font-size:35px; margin-bottom: 0px;'>00:00:00</p>", unsafe_allow_html=True)
 
 # Initial call to update
 update()
